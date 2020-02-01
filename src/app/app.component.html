@@ -11,15 +11,22 @@
 
 <div class="container">
   <div class="row">
-    <div class="col">
-      <mz-chip-input [placeholder]="'Enter a tag'" 
+    <!-- <mz-chip-input [placeholder]="'Enter a tag'" 
       [secondaryPlaceholder]="'+Tag'" [(ngModel)]="chips">
       </mz-chip-input>
 
       <button mz-button (click)="addChip()">Add</button>
-      <button mz-button (click)="removeChip()">Remove</button>
+      <button mz-button (click)="removeChip()">Remove</button> -->
 
+    <button class="waves-effect waves-light btn" 
+    [swal]="{ icon: 'error', title: 'Oops...',
+              text: 'Something went wrong!', 
+              icon: 'warning',
+              showCancelButton: true, confirmButtonColor: '#3085d6',
+              cancelButtonColor: '#d33',
+              confirmButtonText: 'Yes, delete it!'}" (confirm)="saveEmail($event)" (cancel)="handleRefusalToSetEmail($event)">
+      Set my e-mail address
+    </button>
 
-    </div>
   </div>
 </div>

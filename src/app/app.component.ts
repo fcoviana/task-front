@@ -28,4 +28,12 @@ export class AppComponent {
       ...this.chips,
     ];
   }
+
+  public saveEmail(email: string): void {
+
+  }
+
+  public handleRefusalToSetEmail(dismissMethod: string): void {
+
+  }
 }
