@@ -7,4 +7,25 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'task';
+
+  public chips: Materialize.ChipDataObject[] = [
+    { tag: 'Banana' },
+    { tag: 'Kiwi' },
+    { tag: 'Mango' },
+  ];
+
+  addChip() {
+    this.chips = [
+      ...this.chips,
+      { tag: 'Papaya' },
+    ];
+    console.log(this.chips);
+  }
+
+  removeChip() {
+    this.chips.pop();
+    this.chips = [
+      ...this.chips,
+    ];
+  }
 }
