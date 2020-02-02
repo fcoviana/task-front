@@ -2,49 +2,17 @@
   <div class="nav-wrapper">
     <a href="#" class="brand-logo">Task</a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li><a href="sass.html">Sass</a></li>
-      <li><a href="badges.html">Components</a></li>
-      <li><a href="collapsible.html">JavaScript</a></li>
+      <li><a id="btn-dropdown-demo">Task</a></li>
     </ul>
   </div>
 </nav>
 
-<div class="container">
-  <div class="row">
+<mz-dropdown [id]="'dropdown-demo'" [align]="'left'" [belowOrigin]="true" [constrainWidth]="true"
+  [dropdownButtonId]="'btn-dropdown-demo'" [gutter]="true" [hover]="false" [inDuration]="300" [outDuration]="300"
+  [stopPropagation]="true">
+  <mz-dropdown-item><a href="#!">Add</a></mz-dropdown-item>
+  <mz-dropdown-item><a href="#!">List</a></mz-dropdown-item>
+</mz-dropdown>
 
-      <div class="col">
-        <div class="card">
-          <div class="card-content">
-            <span class="card-title">Card Title</span>
-            <p>I am a very simple card. I am good at containing small bits of information.
-            I am convenient because I require little markup to use effectively.</p>
-          </div>
-          <div class="card-action">
-            <a href="#">This is a link</a>
-            <a href="#">This is a link</a>
-          </div>
-        </div>
-      </div>
-    
 
-    <!-- <mz-chip-input [placeholder]="'Enter a tag'" 
-      [secondaryPlaceholder]="'+Tag'" [(ngModel)]="chips">
-      </mz-chip-input>
-
-      <button mz-button (click)="addChip()">Add</button>
-      <button mz-button (click)="removeChip()">Remove</button> -->
-
-    <button class="waves-effect waves-light btn" 
-    [swal]="{ icon: 'error', 
-              title: 'Are you sure',
-              text: 'You wont be able to revert this',
-              icon: 'warning',
-              showCancelButton: true, 
-              confirmButtonColor: '#3085d6',
-              cancelButtonColor: '#d33',
-              confirmButtonText: 'Yes, delete it!'}" (confirm)="saveEmail($event)" (cancel)="handleRefusalToSetEmail($event)">
-      Delete
-    </button>
-
-  </div>
-</div>
+<router-outlet></router-outlet>
