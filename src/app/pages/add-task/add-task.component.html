@@ -1,1 +1,20 @@
-<p>add-task works!</p>
+<mz-modal  [options]="modalOptions">
+    <mz-modal-header>
+        <h4>Add task</h4>
+    </mz-modal-header>
+    <mz-modal-content>
+        <div class="row">
+            <form class="col s12">
+                <div class="input-field">
+                    <input id="last_name" type="text" class="validate">
+                    <label for="last_name">Description</label>
+                </div>
+            </form>
+
+        </div>
+    </mz-modal-content>
+    <mz-modal-footer>
+        <button mz-button [flat]="true" mz-modal-close>Disagree</button>
+        <button mz-button [flat]="true" mz-modal-close>Agree</button>
+    </mz-modal-footer>
+</mz-modal>

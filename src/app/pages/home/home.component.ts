@@ -1,15 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+import { MzModalService } from 'ngx-materialize';
+import { AddTaskComponent } from '../add-task/add-task.component';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
 
-  constructor() { }
+  constructor(private modalService: MzModalService) { }
 
-  ngOnInit() {
+  public openModalTask() {
+    this.modalService.open(AddTaskComponent);
   }
 
 }

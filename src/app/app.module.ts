@@ -22,6 +22,9 @@ import { AddTaskComponent } from './pages/add-task/add-task.component';
     SweetAlert2Module.forRoot(),
   ],
   providers: [],
+  entryComponents: [
+    AddTaskComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
